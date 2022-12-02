@@ -5,7 +5,7 @@ Functons for typer CLI.
 import secrets
 
 
-def tempo_generate(first: int, second: int) -> int:
+def tempo_generate(first: int = 50, second: int = 100) -> int:
     """
     Simple random number function.
     """

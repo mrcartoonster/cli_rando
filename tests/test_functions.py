@@ -15,9 +15,9 @@ def test_generate():
     assert first != second
 
 
-def test_greater_generate():
+def test_default():
     """
-    Testing the numbers are in between what is given.
+    Test the defualt which is 50 and 100.
     """
     sample = tempo_generate(50, 100)
     assert sample > 50 and sample < 100
