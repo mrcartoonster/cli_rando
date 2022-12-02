@@ -28,4 +28,4 @@ jobs:
     - name: Run pytest
       run: poetry run pytest
     - name: Run pre-commit
-      run: pre-commit run -a
+      run: poetry pre-commit run -a
