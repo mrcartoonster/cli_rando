@@ -24,7 +24,7 @@ jobs:
       run: |
         pipx install poetry
     - name: Install dependencies
-      run: poetry install
+      run: poetry install --with dev
     - name: Run pytest
       run: poetry run pytest
     - name: Pre-commit autoupdate
