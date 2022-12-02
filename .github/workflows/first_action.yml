@@ -29,4 +29,5 @@ jobs:
       run: poetry run pytest
     - name: Pre-commit autoupdate
       run: poetry run pre-commit autoupdate
-
+    - name: Run pre-commit
+      run: poetry run pre-commit run -a
