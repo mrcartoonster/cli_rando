@@ -27,7 +27,3 @@ jobs:
       run: poetry install --with dev
     - name: Run pytest
       run: poetry run pytest
-    - name: Pre-commit autoupdate
-      run: poetry run pre-commit autoupdate
-    - name: Run pre-commit
-      run: poetry run pre-commit run -a
