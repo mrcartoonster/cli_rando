@@ -13,6 +13,6 @@ def test_tempo_defualts():
     """
     Testing defaults.
     """
-    result = runner.invoke(app)
+    result = runner.invoke(app, ["tempo"])
     assert result.exit_code == 0
     assert "Set tempo" in result.stdout
