@@ -33,7 +33,7 @@ def common_tempo(
     """
     Common tempos.
     """
-    ...
+    pass
 
 
 if __name__ == "__main__":
