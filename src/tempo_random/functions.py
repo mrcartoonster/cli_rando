@@ -11,10 +11,11 @@ class Tempo(list, Enum):
     Basic tempos.
     """
 
-    ANDANTE = [73, 77]
-    MODERATO = [86, 97]
-    ALLEGRETTO = [98, 109]
-    ALLEGRO = [110, 132]
+    # Changed to title instead of all caps. Will test.
+    Andante = [73, 77]
+    Moderato = [86, 97]
+    Allegretto = [98, 109]
+    Allegro = [110, 132]
 
 
 class TempoList(Enum):
