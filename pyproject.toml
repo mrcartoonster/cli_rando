@@ -17,6 +17,7 @@ pytest-clarity = "^1.0.1"
 pytest = "^7.2.0"
 ipython = "^8.6.0"
 pre-commit = "^2.20.0"
+interrogate = "^1.5.0"
 
 [tool.pytest.ini_options]
 addopts = "-rssxX -l --tb=short --strict --emoji -vvv -p no:warnings"

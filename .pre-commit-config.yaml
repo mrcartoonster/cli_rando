@@ -111,6 +111,7 @@ repos:
           - --verbose
           - --ignore-init-method
           - --ignore-init-module
+
 -   repo: https://github.com/asottile/add-trailing-comma
     rev: v2.3.0
     hooks:

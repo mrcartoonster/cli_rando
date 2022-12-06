@@ -5,7 +5,7 @@ Tempo app.
 import typer
 from rich import print as rprint
 
-from tempo_random.functions import TempoList, Tempo, tempo_generate
+from tempo_random.functions import Tempo, TempoList, tempo_generate
 
 app = typer.Typer(
     name="Tempo",
@@ -38,7 +38,6 @@ def common_tempo(
     Common tempos.
     """
     beat = tempo_generate(*Tempo[tempo].value)
-    breakpoint()
     rprint(f"[bold yellow]The tempo is {tempo} at:[/] [green]{beat}[/]")
 
 
