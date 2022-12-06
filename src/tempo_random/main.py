@@ -5,7 +5,7 @@ Tempo app.
 import typer
 from rich import print as rprint
 
-from tempo_random.functions import TempoList, tempo_generate
+from tempo_random.functions import TempoList, Tempo, tempo_generate
 
 app = typer.Typer(
     name="Tempo",
@@ -28,12 +28,18 @@ def tempo(
 
 @app.command()
 def common_tempo(
-    tempo: TempoList = typer.Argument(TempoList.ANDANTE.value, help="Tempos"),
+    tempo: TempoList = typer.Argument(
+        TempoList.ANDANTE.value,
+        help="Tempos",
+        case_sensitive=False,
+    ),
 ):
     """
     Common tempos.
     """
-    pass
+    beat = tempo_generate(*Tempo[tempo].value)
+    breakpoint()
+    rprint(f"[bold yellow]The tempo is {tempo} at:[/] [green]{beat}[/]")
 
 
 if __name__ == "__main__":

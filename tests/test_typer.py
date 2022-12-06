@@ -16,3 +16,10 @@ def test_tempo_defualts():
     result = runner.invoke(app, ["tempo"])
     assert result.exit_code == 0
     assert "Set tempo" in result.stdout
+
+
+def test_common_tempo():
+    """Testing default common-tempo which is
+    between 73 and 77"""
+    result = runner.invoke(app, ["common-tempo"])
+    assert result.exit_code == 0
