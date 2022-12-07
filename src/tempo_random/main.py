@@ -16,8 +16,8 @@ app = typer.Typer(
 
 @app.command()
 def tempo(
-    start: int = typer.Argument(50, help="Start number"),
-    stop: int = typer.Argument(100, help="Stop number"),
+    start: int = typer.Argument(50, help="Start number", metavar="🚀Start🚀"),
+    stop: int = typer.Argument(100, help="Stop number", metavar="🛑Stop🛑"),
 ):
     """
     Enter start number and stop number to randomly select a tempo time.
@@ -37,8 +37,11 @@ def common_tempo(
     """
     Common tempos.
     """
-    beat = tempo_generate(*Tempo[tempo].value)
-    rprint(f"[bold yellow]The tempo is {tempo} at:[/] [green]{beat}[/]")
+    # breakpoint()
+    beat = tempo_generate(*Tempo[tempo.value].value)
+    rprint(
+        f"[purple4]The tempo is [bold red u]{tempo.value}[/] at:[/] [green]{beat}[/]",
+    )
 
 
 if __name__ == "__main__":
