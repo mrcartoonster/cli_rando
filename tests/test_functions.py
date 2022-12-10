@@ -2,12 +2,7 @@
 """
 Will have the tests for functions here.
 """
-# import pytest
-
 from src.tempo_random.functions import tempo_generate
-
-# set_tempos = [(50, 60), (60, 70), (70, 80)]
-# tempo_ids = [str(_) for _ in set_tempos]
 
 
 def test_generate():
@@ -28,8 +23,6 @@ def test_default():
     assert sample >= 50 and sample <= 100
 
 
-# @pytest.mark.smoke
-# @pytest.mark.parametrize("numbers", set_tempos, ids=tempo_ids)
 def test_multiples(numbers):
     """
     Testing multiples.

@@ -24,3 +24,12 @@ def test_common_tempo():
     """
     result = runner.invoke(app, ["common-tempo"])
     assert result.exit_code == 0
+
+
+def test_wrong_input():
+    """
+    Test that if correct but wrong capitilization is entere still goes
+    through.
+    """
+    result = runner.invoke(app, ["common-tempo", "allegro"])
+    assert result.exit_code == 0
